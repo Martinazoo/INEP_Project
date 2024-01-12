@@ -29,19 +29,21 @@ int main() {
 		if (opt == 1) {
 			try {
 				cdp.iniciSessio();
+				cout << "Sessio iniciada correctament!" << endl << endl;
 			}
 			catch (const exception& e) {
-				std::cerr << "Error: " << e.what() << std::endl;
-				return 1;
+				std::cerr << "Error: el sobrenom o la contraseya son incorrectes\n" << std::endl;
+				goto inici;
 			}
 		}
 		else if (opt == 2) {
 			try {
 				cdp.registrarUsuari();
+				cout << "Usuari registrat amb exit" << endl << endl;
 			}
 			catch (const exception& e) {
 				std::cerr << "Error: " << e.what() << std::endl;
-				return 1;
+				goto inici;
 			}
 
 		}
